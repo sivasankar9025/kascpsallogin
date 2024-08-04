@@ -17,7 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         },
         student: {
             '221it056': 'kasc@123',
-            '221it056': 'kasc@123'
+            'student': 'kasc@123'
         }
     };
 
@@ -35,9 +35,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             window.location.href = 'check.html';
         } else if (role === 'student') {
             if (username === '221it056') {
-                window.location.href = 'https://kascps.onrender.com/';
+                window.location.href = 'https://kascpsindex.onrender.com/';
             } else {
-                window.location.href = 'https://kascps.onrender.com/';
+                window.location.href = 'https://kascpsindex.onrender.com/';
             }
         }
     } else {
