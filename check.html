@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCORE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="result">
+        <center><h2>SCORE</h2></center>
+
+        <!-- Part 1: Personal Details -->
+        <h3>PERSONAL DETAILS</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td id="name"></td>
+                </tr>
+                <tr>
+                    <td>Register No</td>
+                    <td id="registerNo"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td id="gender"></td>
+                </tr>
+                <tr>
+                    <td>First Graduate</td>
+                    <td id="graduate"></td>
+                </tr>
+                <tr>
+                    <td>Percentage scored in 12th standard (HSC)</td>
+                    <td id="hsc"></td>
+                </tr>
+                <tr>
+                    <td>My Ambition</td>
+                    <td id="myambition"></td>
+                </tr>
+                <tr>
+                    <td>Department</td>
+                    <td id="department"></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td id="dob"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Part 2 Results -->
+        <h3>SELF EFFICACY</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="part2Result"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Part 3 Results -->
+        <h3>VISUAL LEARNING STYLE</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="part3Result"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <!-- Auditorylearningstyle Results -->
+        <h3>AUDITORY LEARNING STYLE</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="AuditorylearningstyleResult"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <!-- Kinestheticlearningstyle Results -->
+        <h3>KINESTHETIC LEARNING STYLE</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="KinestheticlearningstyleResult"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+        <!-- Part 4 Results -->
+        <h3>ACADEMIC SKILL</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="part4Result"></td>
+                </tr>
+            </tbody>
+        </table>
+
+         <!-- Executivefunction -->
+         <h3>EXECUTIVE FUNCTION</h3>
+         <table>
+             <thead>
+                 <tr>
+                     <th>Description</th>
+                     <th>Value</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td>SCORE</td>
+                     <td id="Executivefunction"></td>
+                 </tr>
+             </tbody>
+         </table>
+
+         <!-- Motivationandconfidence -->
+         <h3>MOTIVATION AND CONFIDENCE</h3>
+         <table>
+             <thead>
+                 <tr>
+                     <th>Description</th>
+                     <th>Value</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td>SCORE</td>
+                     <td id="Motivationandconfidence"></td>
+                 </tr>
+             </tbody>
+         </table>
+
+         <!-- PostEducation Results -->
+         <h3>POST EDUCATION</h3>
+         <table>
+             <thead>
+                 <tr>
+                     <th>Description</th>
+                     <th>Value</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td>SCORE</td>
+                     <td id="PostEducation"></td>
+                 </tr>
+             </tbody>
+         </table>
+
+
+          <!-- Part 5 Results -->
+        <h3>PERSONALLY RESERVED</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="part5Result"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Selfcriticism Results -->
+        <h3>SELF-CRITICISM</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="SelfcriticismResult"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- AnxiousWorrying Results -->
+        <h3>ANXIOUS & WORRYING</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="AnxiousWorryingResult"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Perfectionism Results -->
+        <h3>PERFECTIONSM</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="PerfectionismResult"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Irritability Results -->
+        <h3>IRRITABILITY</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="IrritabilityResult"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+        <!-- Part 6 Results -->
+        <h3>LEVEL OF SOCIAL SUPPORT Question 1</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="part6Result"></td>
+                </tr>
+            </tbody>
+        </table>
+
+         <!-- Part 66 Results -->
+         <h3>LEVEL OF SOCIAL SUPPORT Question 2</h3>
+         <table>
+             <thead>
+                 <tr>
+                     <th>Description</th>
+                     <th>Value</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td>SCORE</td>
+                     <td id="part66Result"></td>
+                 </tr>
+             </tbody>
+         </table>
+ 
+
+        <!-- Part 7 Results -->
+        <h3>LEADERSHIP ASPIRATION</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="part7Result"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- AchievementAspiration Results -->
+        <h3>ACHIEVEMENT ASPIRATION</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="AchievementAspirationResult"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Educationalaspiration Results -->
+        <h3>EDUCATION ASPIRATION</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SCORE</td>
+                    <td id="EducationalaspirationResult"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        
+        <!-- Submission Time -->
+        <h3>Submission & Time</h3>
+        <p id="submissionTime"></p>
+    </div>
+    <div class="pagination-buttons">
+        <button id="prevPage">Previous</button>
+        <span id="currentPage">Page 1</span>
+        <button id="nextPage">Next</button>
+    </div>
+
+    <script>
+        let globalData = [];
+        let currentPage = 1;
+
+        async function fetchData() {
+            try {
+                const response = await fetch('https://kascit.onrender.com/get'); // Replace with your API endpoint
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`Network response was not ok: ${response.statusText} - ${errorText}`);
+                }
+
+                const data = await response.json();
+                console.log('Fetched data:', data); // Log the raw response data
+
+                // Check if the response has the expected structure
+                if (!data.response || !Array.isArray(data.response)) {
+                    console.error('Expected an array under the "response" key but received:', data);
+                    return;
+                }
+
+                globalData = data.response;
+                if (globalData.length === 0) {
+                    console.error('Received data is empty');
+                    return;
+                }
+
+                displayData(currentPage);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        function displayData(page) {
+            let i=0;
+            console.log('Displaying page:', page);
+            console.log('Global data length:', globalData.length);
+
+            // Check if the page number is valid
+            if (page < 1 || page > globalData.length) {
+                return;
+            }
+
+            // Get the data for the current page
+            const data = globalData[page - 1];
+            if (!data) {
+                console.error('No data available for page:', page);
+                return;
+            }
+
+            // Update the HTML content with the current page's data
+            document.getElementById('name').textContent = data.name || 'N/A';
+            document.getElementById('registerNo').textContent = data.registerNo || 'N/A';
+            document.getElementById('gender').textContent = data.gender || 'N/A';
+            document.getElementById('graduate').textContent = data.graduate || 'N/A';
+            document.getElementById('hsc').textContent = data.hsc || 'N/A';
+            document.getElementById('myambition').textContent = data.myambition || 'N/A';
+            document.getElementById('department').textContent = data.dept || 'N/A';
+            document.getElementById('dob').textContent = data.dob || 'N/A';
+            document.getElementById('submissionTime').textContent = data.date || 'N/A';
+           console.log(data)
+            let part2ResultMessage = '';
+        const part2Total = data.arr[i++].score || 0;
+        if (part2Total >= 4 && part2Total <= 8) {
+            part2ResultMessage = 'Her score on the self-efficacy measure indicates a low level of self- efficacy. So, she avoids challenging tasks and believes that difficult tasks and situations are beyond their capabilities, only focus on personal failings and negative outcomes. Of being low self-efficacy, she quickly loses her confidence in personal abilities.';
+        } else if (part2Total >= 9 && part2Total <= 12) {
+            part2ResultMessage = 'Her score on the self-efficacy measure indicates a moderate level of self-efficacy. She will therefore be mediocrity confident in her capacity to achieve her objective and play a partly involved role in her academic life. She will also be aware of herself and capable of identifying the setbacks she has in life. She should attempt to assess her own potential, visualize her success, and have positive self-talk in order to better her.';
+        } else if (part2Total >= 13 && part2Total <= 16) {
+            part2ResultMessage = 'Her score on the self-efficacy measure indicates a high level of self- efficacy. She has strong sense of self-confidence, more capable of self-evaluation and self-awareness. She has the willingness to take risks or step outside of her comfort zone.';
+        } else {
+            part2ResultMessage = 'No specific result for Part 2';
+        }
+        document.getElementById('part2Result').textContent = part2ResultMessage;
+
+        let part3ResultMessage = '';
+        const part3Total = data.arr[i++].score || 0;
+        if (part3Total >= 1 && part3Total <= 3) {
+            part3ResultMessage = 'All Learning style';
+        } else if (part3Total >= 4 && part3Total <= 6) {
+            part3ResultMessage = 'Visual learning style';
+        } else if (part3Total >= 7 && part3Total <= 8) {
+            part3ResultMessage = 'Auditory learning style';
+        } else {
+            part3ResultMessage = 'No specific result for Part 3';
+        }
+        document.getElementById('part3Result').textContent = part3ResultMessage;
+        let AuditorylearningstyleResultMessage = '';
+        const AuditorylearningstyleTotal =  data.arr[i++].score || 0;
+        if (AuditorylearningstyleTotal >= 1 && AuditorylearningstyleTotal <= 3) {
+            AuditorylearningstyleResultMessage = 'All Learning style';
+        } else if (AuditorylearningstyleTotal >= 4 && AuditorylearningstyleTotal <= 6) {
+            AuditorylearningstyleResultMessage = 'Visual learning style';
+        } else if (AuditorylearningstyleTotal >= 7 && AuditorylearningstyleTotal <= 8) {
+            AuditorylearningstyleResultMessage = 'Auditory learning style';
+        } else {
+            AuditorylearningstyleResultMessage = 'No specific result for Auditorylearningstyle';
+        }
+        document.getElementById('AuditorylearningstyleResult').textContent = AuditorylearningstyleResultMessage
+
+        let KinestheticlearningstyleResultMessage = '';
+        const KinestheticlearningstyleTotal = data.arr[i++].score || 0;
+        if (KinestheticlearningstyleTotal >= 2 && KinestheticlearningstyleTotal <= 6) {
+            KinestheticlearningstyleResultMessage = 'All Learning style';
+        } else if (KinestheticlearningstyleTotal >= 1 && KinestheticlearningstyleTotal <= 3) {
+            KinestheticlearningstyleResultMessage = 'Visual learning style';
+        } else if (KinestheticlearningstyleTotal >= 4 && KinestheticlearningstyleTotal <= 6) {
+            KinestheticlearningstyleResultMessage = 'Auditory learning style';
+        } else {
+            KinestheticlearningstyleResultMessage = 'No specific result for Kinestheticlearningstyle';
+        }
+        document.getElementById('KinestheticlearningstyleResult').textContent = KinestheticlearningstyleResultMessage;
+
+
+        let part4ResultMessage = '';
+        const part4Total = data.arr[i++].score || 0;
+        if (part4Total >= 0 && part4Total <= 1) {
+            part4ResultMessage = 'She has scored low in Academic skills. Low academic skill levels are synonymous with low academic abilities. In order to do better, she can set goals, stick to routines and timetables, reward themselves for finishing challenging tasks, and manage their time effectively.';
+        } else if (part4Total >= 2 && part4Total <= 2) {
+            part4ResultMessage = 'She has scored high in Academic skills. An individual with a high academic skill score will be resourceful, able to work well in a team, and capable of solving issues. They are able to pick up new abilities. She can be able to read and write with a high level of independence.';
+        } else {
+            part4ResultMessage = 'No specific result for Part 4';
+        }
+        document.getElementById('part4Result').textContent = part4ResultMessage;
+
+
+        let ExecutivefunctionResultMessage = '';
+        const ExecutivefunctionTotal = data.arr[i++].score || 0;
+        if (ExecutivefunctionTotal >= 0 && ExecutivefunctionTotal <= 1) {
+            ExecutivefunctionResultMessage = 'In executive function of college readiness, she has scored low. The individual with the lowest executive function score can strive to improve by organizing themselves, maintaining a positive outlook on themselves, taking a step-by-step approach to their work, and practicing meditation on a date night.';
+        } else if (ExecutivefunctionTotal == 2) {
+            ExecutivefunctionResultMessage = 'In executive function of college readiness, she has scored high. An individual with a high executive function score will be well-suited to tasks requiring flexibility of thought and internal control. She has good leadership abilities and can handle lifes tasks. She has the skills like working memory, planning flexibility, emotional control and time management and has the ability in initiating tasks, and highly attentive. She can be able to keep track of assignments, organize books/materials and manage time independently.';
+        } else {
+            ExecutivefunctionResultMessage = 'No specific result for Executivefunction';
+        }
+        document.getElementById('Executivefunction').textContent = ExecutivefunctionResultMessage;
+
+
+        
+        let MotivationandconfidenceResultMessage = '';
+        const MotivationandconfidenceTotal =data.arr[i++].score || 0;
+        if (MotivationandconfidenceTotal >= 0 && MotivationandconfidenceTotal <= 1) {
+            MotivationandconfidenceResultMessage = 'In motivation and confidence of college readiness she has scored high. The individual with the highest motivation and confidence score will be highly motivated to pursue life goals and succeed in college. She has high desire to gain new knowledge and skills in a particular field. She is highly motivated towards the current education and she is more confident in the growth of mindset in every opportunity to learn and grow academically and personally. She will also have a positive outlook on the future and be highly curious to learn new things. She can have clear set goals and believe that he or she can succeed.';
+        } else if (MotivationandconfidenceTotal >= 2 && MotivationandconfidenceTotal <= 2) {
+            MotivationandconfidenceResultMessage = 'Her score on the self-efficacy measure indicates a high level of self- efficacy. She has strong sense of self-confidence, more capable of self-evaluation and self-awareness. She has the willingness to take risks or step outside of her comfort zone.';
+        } else {
+            MotivationandconfidenceResultMessage = 'No specific result for Motivationandconfidence';
+        }
+        document.getElementById('Motivationandconfidence').textContent = MotivationandconfidenceResultMessage;
+
+
+        let PostEducationResultMessage = '';
+        const PostEducationTotal = data.arr[i++].score || 0;
+        if (PostEducationTotal >= 0 && PostEducationTotal <= 2) {
+            PostEducationResultMessage = 'In post education of college readiness, she has scored low who is not prepared for college and will not be able to pay attention and hugely non-serious in concern of studies and taking the things granted, wasting her time on unproductive activities and daily schedule will based on her mood, not on priorities. Therefore, in order to improve, she can adopt a positive outlook for her post-educational future. Only then she will able to organize her work, create a schedule that works, and manage her study space.';
+        } else if (PostEducationTotal >= 3 && PostEducationTotal <= 4) {
+            PostEducationResultMessage = 'In post education of college readiness, she has scored high. In terms of post- school preparedness, she can perform well. Following education and being prepared for college, she has these abilities: critical thinking, self-control, communication, teamwork, and study skills etc. She can be able to invest in her own education, see the value of obtaining some type of training/education past high school and attend based on the correct motivation.';
+        } else {
+            PostEducationResultMessage = 'No specific result for PostEducation';
+        }
+        document.getElementById('PostEducation').textContent = PostEducationResultMessage;
+
+        let part5ResultMessage = '';
+        const part5Total = data.arr[i++].score || 0;
+        if (part5Total >= 1 && part5Total <= 2) {
+            part5ResultMessage = 'She doesn’t have a propensity to keep her personal emotions to herself. She is not reluctant to let friends and acquaintances get to know her too well. She is less endowed with virtues than vices.';
+        } else if (part5Total >= 3 && part5Total <= 4) {
+            part5ResultMessage = 'She has a propensity to keep her personal emotions to herself. She is partially reluctant to let friends and acquaintances get to know her too well. She has more good qualities than bad ones.';
+        } else {
+            part5ResultMessage = 'No specific result for Part 5';
+        }
+        document.getElementById('part5Result').textContent = part5ResultMessage;
+
+        let SelfcriticismResultMessage = '';
+        const SelfcriticismTotal = data.arr[i++].score || 0;
+        if (SelfcriticismTotal >= 1 && SelfcriticismTotal <= 2) {
+            SelfcriticismResultMessage = 'She cannot be quite impatient with other people and intolerance or irritability with anything that impedes or delays, restless desire for change and excitement. She does not have the tendency to engage in negative self-evaluation that results in feelings of worthy, optimistic, and dignity.';
+        } else if (SelfcriticismTotal >= 3 && SelfcriticismTotal <= 4) {
+            SelfcriticismResultMessage = 'She can be quite impatient with other people and intolerance or irritability with anything that impedes or delays, restless desire for change and excitement. Her tendency to engage in negative self-evaluation that results in feelings of worthlessness, failure, and guilt when expectations are not met; it was originally seen as particularly relevant to the development of depression.';
+        } else {
+            SelfcriticismResultMessage = 'No specific result for Selfcriticism';
+        }
+        document.getElementById('SelfcriticismResult').textContent = SelfcriticismResultMessage;
+
+
+        let AnxiousWorryingResultMessage = '';
+const AnxiousWorryingTotal = data.arr[i++].score || 0;
+if (AnxiousWorryingTotal >= 1 && AnxiousWorryingTotal <= 2) {
+    AnxiousWorryingResultMessage = 'She is not anxious, worrying and stressed. Her emotions relating to relationships will not fluctuate very quickly.';
+} else if (AnxiousWorryingTotal >= 3 && AnxiousWorryingTotal <= 4) {
+    AnxiousWorryingResultMessage = 'She is anxious, worrying and stressed. Excessive worrying may increase the risk of developing depression. When under stress, she will experience catastrophic thoughts and feel overwhelmed. She can adapt ways to manage anxiety and worrying includes learning about anxiety, mindfulness, relaxation techniques, correct breathing techniques, dietary adjustments, exercise, learning to be assertive, building self-esteem etc.';
+} else {
+    AnxiousWorryingResultMessage = 'No specific result for AnxiousWorrying';
+}
+document.getElementById('AnxiousWorryingResult').textContent = AnxiousWorryingResultMessage;
+
+
+let PerfectionismResultMessage = '';
+const PerfectionismTotal = data.arr[i++].score || 0;
+if (PerfectionismTotal >= 1 && PerfectionismTotal <= 2) {
+    PerfectionismResultMessage = 'She is not very responsible to have high standards for herself and to be highly committed to tasks and duties. She will not feel confident and has ability to  size up and  deal with any situation. She doesn’t exude confidence and is not capable of assessing and handling any circumstance.';
+} else if (PerfectionismTotal >= 3 && PerfectionismTotal <= 4) {
+    PerfectionismResultMessage = 'She is very responsible to have high standards for herself and to be highly committed to tasks and duties. She feels confident and has ability to size up and deal with any situation. She’ll always do her best. She exudes confidence and is capable of assessing and handling any circumstance.';
+} else {
+    PerfectionismResultMessage = 'No specific result for Perfectionism';
+}
+document.getElementById('PerfectionismResult').textContent = PerfectionismResultMessage;
+
+
+
+let IrritabilityResultMessage = '';
+const IrritabilityTotal = data.arr[i++].score || 0;
+if (IrritabilityTotal >= 1 && IrritabilityTotal <= 2) {
+    IrritabilityResultMessage = 'She doesn’t have the tendency to be quick-tempered and not to externalize stress by becoming snappy and irritated by little things.';
+} else if (IrritabilityTotal >= 3 && IrritabilityTotal <= 4) {
+    IrritabilityResultMessage = 'She has the tendency to be quick-tempered and to externalize stress by becoming snappy and irritated by little things. She has a feeling of agitation, frustrated or upset easily. She might experience it in response to stressful situations. It may also be a symptom of a mental or physical health condition.';
+} else {
+    IrritabilityResultMessage = 'No specific result for Irritability';
+}
+document.getElementById('IrritabilityResult').textContent = IrritabilityResultMessage;
+
+
+let part6ResultMessage = '';
+const part6Total = data.arr[i++].score || 0;
+if (part6Total == 1) {
+    part6ResultMessage = 'She is completely free to be herself with her family. When she needs someone to listen to her, her family is the one she can actually rely on more than her friends and social media. She is less involved in social sectors because of her low communication level in terms of socialization.';
+} else if (part6Total == 2) {
+    part6ResultMessage = 'She is completely free to be herself with her friends. When she needs someone to listen to her, her friends are the one she can actually rely on more than her family and social media. She is more involved in social sectors because of her high communication level in terms of socialization.';
+} else if (part6Total == 3) {
+    part6ResultMessage = 'She is completely free to be herself with social media. When she needs someone to listen to her, she uses to chat and engage herself in electronic gadgets. She can actually rely on social media more than her family and friends. She is not involved   in social sectors because of her low communication level in terms of socialization. She will be talk more, are more repetitive, communicate with less diverse vocabulary and use more formal language and fewer positive emotion words.';
+} else {
+    part6ResultMessage = 'No specific result for Part 6';
+}
+document.getElementById('part6Result').textContent = part6ResultMessage;
+
+const part66Total = data.arr[i++].score|| 0;
+if (part66Total == 1) {
+    part66ResultMessage = 'She is completely free to be herself with her family. When she needs someone to listen to her, her family is the one she can actually rely on more than her friends and social media. She is less involved in social sectors because of her low communication level in terms of socialization.';
+} else if (part66Total == 2) {
+    part66ResultMessage = 'She is completely free to be herself with her friends. When she needs someone to listen to her, her friends are the one she can actually rely on more than her family and social media. She is more involved in social sectors because of her high communication level in terms of socialization.';
+} else if (part66Total == 3) {
+    part66ResultMessage = 'She is completely free to be herself with social media. When she needs someone to listen to her, she uses to chat and engage herself in electronic gadgets. She can actually rely on social media more than her family and friends. She is not involved   in social sectors because of her low communication level in terms of socialization. She will be talk more, are more repetitive, communicate with less diverse vocabulary and use more formal language and fewer positive emotion words.';
+} else {
+    part6ResultMessage = 'No specific result for Part 66';
+}
+document.getElementById('part66Result').textContent = part66ResultMessage;
+
+
+let part7ResultMessage = '';
+const part7Total = data.arr[i++].score || 0;
+if (part7Total >= 8 && part7Total <= 16) {
+    part7ResultMessage = 'She scored 12 in leadership aspiration which advocates that she has low leadership aspirations, a lack of desire or ambition to take on leadership roles or responsibilities within an organization or community. This can manifest in various ways, such as a reluctance to seek out leadership positions, a lack of interest in developing leadership skills, or a preference for staying within a more passive or follower role. She may have a lack of confidence, fear of failure, comfort zone, unawareness of potentials etc.';
+} else if (part7Total >= 17 && part7Total <= 23) {
+    part7ResultMessage = 'She scored 12 in leadership aspiration which advocates that she has moderate leadership aspirations. She has an interest in taking on leadership roles, but perhaps not at the highest or most intense level. This could mean she is open to leadership opportunities and responsibilities, but she may not be actively seeking out executive or top-tier management positions.';
+} else if (part7Total >= 24 && part7Total <= 32) {
+    part7ResultMessage = 'She scored 12 in leadership aspiration which advocates that she have a strong ambition and dedication to assume leadership roles and have a beneficial impact on a community or organization. She frequently demonstrates traits and attributes such as resilience, teamwork, emotional intelligence, visionary thinking, drive, ambition, effective communication, flexibility, and continual learning. She intentionally focuses on positively influencing the capacity to flourish in her professional and personal life and to strive to perform at her best. She has the ability in building a practice of reflection and action whereby she become increasingly curious about how her thinking is impacting her actions of good leadership qualities.';
+} else {
+    part7ResultMessage = 'No specific result for Part 7';
+}
+document.getElementById('part7Result').textContent = part7ResultMessage;
+
+ 
+let AchievementAspirationResultMessage = '';
+const AchievementAspirationTotal = data.arr[i++].score || 0;
+if (AchievementAspirationTotal >= 8 && AchievementAspirationTotal <= 16) {
+    AchievementAspirationResultMessage = 'She has low achievement aspirations indicated by the score 12. Suggests that she have limited motivation or ambition to set and achieve challenging goals. It could be indicative of a mindset where the person is not actively seeking or striving for higher levels of success or accomplishment.';
+} else if (AchievementAspirationTotal >= 17 && AchievementAspirationTotal <= 23) {
+    AchievementAspirationResultMessage = 'She has moderate achievement aspirations indicated by the score 12. This could suggest that she have some aspirations and goals but may not be extremely ambitious or overly modest.';
+} else if (AchievementAspirationTotal >= 24 && AchievementAspirationTotal <= 32) {
+    AchievementAspirationResultMessage = 'She has high achievement aspirations indicated by the score 12. Refer that she is quite broad and could refer to various contexts, such as academic achievements, career goals, sports, personal accomplishments, setting realistic goals, staying focused, and consistently working towards achievements. She takes lots of initiatives to achieve in her day to day life events. She can understand long-term life satisfaction that emphasizes the importance of an individuals perception of her success in one or more life domains relative to personal goals.';
+} else {
+    AchievementAspirationResultMessage = 'No specific result for AchievementAspiration';
+}
+document.getElementById('AchievementAspirationResult').textContent = AchievementAspirationResultMessage;
+
+let EducationalaspirationResultMessage = '';
+const EducationalaspirationTotal = data.arr[i++].score || 0;
+if (EducationalaspirationTotal >= 8 && EducationalaspirationTotal <= 16) {
+    EducationalaspirationResultMessage = 'Her score 12 indicates that she has low educational aspiration refers to a lack of motivation or desire to pursue a higher level of education. This manifests in various ways, such as a disinterest in academic achievement, a belief that education is not important, or a perception that her current level of education is sufficient for her needs. She may not see the value or importance of obtaining additional education beyond a certain level.';
+} else if (EducationalaspirationTotal >= 17 && EducationalaspirationTotal <= 23) {
+    EducationalaspirationResultMessage = 'Her score 12 indicates that she has moderate educational aspiration and has desire for education and personal development but may not be aiming for the highest level of academic achievement. She often seeks a balance between acquiring practical skills and gaining a reasonable level of academic achievement. She prioritizes a combination of formal education, vocational training, or professional certifications that directly contribute to her career objective.';
+} else if (EducationalaspirationTotal >= 24 && EducationalaspirationTotal <= 32) {
+    EducationalaspirationResultMessage = 'Her score 12 indicates that she has high educational aspirations refers to a strong desire and ambition to achieve significant accomplishments in her education. She set lofty goals for her academic pursuits and are motivated to excel in studies. This often extends beyond simply obtaining a degree and involves a commitment to continuous learning, personal development, and making a positive impact in chosen field.';
+} else {
+    EducationalaspirationResultMessage = 'No specific result for Educationalaspiration';
+}
+document.getElementById('EducationalaspirationResult').textContent = EducationalaspirationResultMessage;
+
+
+
+
+
+
+            // Update the current page display
+            document.getElementById('currentPage').textContent = `Page ${page}`;
+        }
+
+        document.getElementById('prevPage').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                displayData(currentPage);
+            }
+        });
+
+        document.getElementById('nextPage').addEventListener('click', () => {
+            if (currentPage < globalData.length) {
+                currentPage++;
+                displayData(currentPage);
+            }
+        });
+
+        // Initial data fetch and display
+        fetchData();
+    </script>
+</body>
+</html>
